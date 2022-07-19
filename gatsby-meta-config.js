@@ -1,8 +1,8 @@
 module.exports = {
-  title: `zoomkoding.com`,
-  description: `줌코딩의 개발일기`,
+  title: `Hello World! Hello Jayden!`,
+  description: `Jayden's devLog`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.zoomkoding.com`,
+  siteUrl: `https://JaydenLee1116.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
@@ -11,16 +11,16 @@ module.exports = {
   },
   ga: '0', // Google Analytics Tracking ID
   author: {
-    name: `정진혁`,
+    name: `이재호`,
     bio: {
-      role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      role: `프론트엔드 개발자`,
+      description: ['세상에 기여하는', '인생을 여행하는', '이로움을 행하는'],
       thumbnail: 'sample.png', // Path to the image in the 'asset' folder
     },
     social: {
-      github: ``, // `https://github.com/zoomKoding`,
-      linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
-      email: ``, // `zoomkoding@gmail.com`,
+      github: `https://github.com/JaydenLee1116`, // `https://github.com/JaydenLee1116`,
+      linkedIn: `ㅁ`, // ``,
+      email: `vv55adss@gmail.com`, // `vv55adss@gmail.com`,
     },
   },
 

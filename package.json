@@ -1,9 +1,9 @@
 {
-  "name": "zoomkoding.com",
+  "name": "jaydenlee1116",
   "private": false,
-  "description": "A neat blog theme for developers",
+  "description": "jayden's dev blog",
   "version": "3.0.0",
-  "author": "zoomkoding <zoomkoding@gmail.com>",
+  "author": "jayden1116 <vv55adss@gmail.com>",
   "dependencies": {
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
@@ -36,7 +36,7 @@
     "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^4.0.0",
     "prettier": "2.2.1"
   },
   "keywords": [

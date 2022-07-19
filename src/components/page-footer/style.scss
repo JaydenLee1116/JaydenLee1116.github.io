@@ -20,7 +20,8 @@
     }
 
     a {
-      color: #3A95FF;
+      color: var(--primary-text-color);
+      font-weight: bold;
     }
   }
 }
