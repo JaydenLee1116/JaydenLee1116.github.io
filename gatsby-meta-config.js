@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Hello World! Hello Jayden!`,
+  title: `Hello World! Hello Jaydn!`,
   description: `Jayden's devLog`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://JaydenLee1116.github.io`,
