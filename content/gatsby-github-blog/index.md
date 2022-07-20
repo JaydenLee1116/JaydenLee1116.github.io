@@ -3,9 +3,13 @@ emoji: 🔮
 title: Gatsby 테마로 GitHub Blog 만들기
 date: '2021-07-06 00:00:00'
 author: 줌코딩
-tags: 블로그 github-pages gatsby
-categories: 블로그 featured
+tags: 참고
+categories: 참고
 ---
+
+## 🍡 주의
+
+이 글을 Gatsby 테마를 제공해주신 zoomKoding님의 글로, 글 작성 시 참고를 위해 당분간 남겨두는 글입니다. 💯
 
 제 블로그의 테마나 Gatsby의 다른 테마를 활용해서 Github Blog를 만들고 싶은 분들이 계실텐데요! 이런 분들에게 도움을 드리고자 이 글을 쓰게 되었습니다. 잘 안되는 부분이나 궁금한 점을 댓글로 남겨주면 확인해보고 답변 드리도록 하겠습니다!
 

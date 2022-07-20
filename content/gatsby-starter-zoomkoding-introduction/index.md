@@ -3,9 +3,13 @@ emoji: 🧢
 title: 쉽고 빠르게 나만의 개츠비(Gatsby) 블로그 만들기
 date: '2021-03-22 23:00:00'
 author: 줌코딩
-tags: blog gatsby theme 개츠비 테마
-categories: 블로그 featured
+tags: 참고
+categories: 참고
 ---
+
+## 🍡 주의
+
+이 글을 Gatsby 테마를 제공해주신 zoomKoding님의 글로, 글 작성 시 참고를 위해 당분간 남겨두는 글입니다. 💯
 
 ## 👋 소개
 

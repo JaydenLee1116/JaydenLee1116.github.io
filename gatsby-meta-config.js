@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Hello World! Hello Jayden!`,
+  title: `Jayden {do: smite}`,
   description: `Jayden's devLog`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://JaydenLee1116.github.io`,
@@ -90,10 +90,10 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        title: '준비 중',
-        description: '준비 중',
+        title: '업데이트 예정',
+        description: '업데이트 예정입니다.',
         techStack: ['HTML', 'CSS', 'Javascript'],
-        thumbnailUrl: 'blog.png', // assets 폴더에 png 파일 지정 ex) blog.png
+        thumbnailUrl: 'sample.png', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/JaydenLee1116',
         },
