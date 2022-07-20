@@ -1,0 +1,17 @@
+name: Gatsby Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ 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 }}
+          deploy-branch: deploy
+          skip-publish: false
