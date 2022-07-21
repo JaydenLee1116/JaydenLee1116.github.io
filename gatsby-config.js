@@ -120,14 +120,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        trackingId: `G-BGBP496RK4`,
-        head: false,
-        anonymize: true,
-      },
-    },
     `gatsby-theme-material-ui`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-advanced-sitemap`,
@@ -136,5 +128,13 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-BGBP496RK4`,
+        head: false,
+        anonymize: true,
+      },
+    },
   ],
 };
