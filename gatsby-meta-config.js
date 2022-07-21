@@ -6,7 +6,7 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `JaydenLee1116/JaydenLee1116.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
@@ -14,8 +14,14 @@ module.exports = {
     name: `이재호`,
     bio: {
       role: `프론트엔드 개발자`,
-      description: ['세상에 기여하는', '인생을 여행하는', '이로움을 행하는', '책을 좋아하는'],
-      thumbnail: 'profile.png', // Path to the image in the 'asset' folder
+      description: [
+        '인생을 여행하는',
+        '세상에 기여하는',
+        '이로움을 행하는',
+        '행복을 추구하는',
+        '매일 기록하는',
+      ],
+      thumbnail: 'jayden-emoji-ani.gif', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/JaydenLee1116`, // `https://github.com/JaydenLee1116`,
