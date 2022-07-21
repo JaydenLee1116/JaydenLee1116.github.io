@@ -7,14 +7,6 @@ module.exports = {
 
   plugins: [
     {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        trackingIds: [
-          'G-BGBP496RK4', // 설정 Google Analytics / GA
-        ],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
