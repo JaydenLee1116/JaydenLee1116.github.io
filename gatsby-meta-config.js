@@ -25,7 +25,7 @@ module.exports = {
     },
     social: {
       github: `https://github.com/JaydenLee1116`, // `https://github.com/JaydenLee1116`,
-      linkedIn: `ㅁ`, // ``,
+      linkedIn: `https://www.linkedin.com/in/jaeho-jayden-%E2%80%8Dlee-a0a902216/`, // ``,
       email: `vv55adss@gmail.com`, // `vv55adss@gmail.com`,
     },
   },
