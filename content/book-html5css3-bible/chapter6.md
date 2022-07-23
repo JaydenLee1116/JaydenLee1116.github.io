@@ -301,6 +301,8 @@ categories: 책 HTML CSS WEB
 
 ## 📕 정리
 
+### 중요한 내용
+
 - 뷰포트 meta 태그
 - 스프라이트 이미지
 - nav 만드는 방법
