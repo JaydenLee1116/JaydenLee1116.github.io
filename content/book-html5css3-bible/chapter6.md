@@ -14,10 +14,8 @@ categories: 책 HTML CSS WEB
 
 ## 📖 1. 스마트폰 레이아웃
 
-레이아웃 관련 챕터의 경우 코드를 쭉 나열하고 주석으로 도움되는 팁들(🌟로 표시해두겠습니다.)을 기록하려 합니다. <br/>
-코드 원본은 [링크](https://www.hanbit.co.kr/support/supplement_list.html)에서 받으실 수 있습니다.
-<br/>
-<br/>
+> 코드를 쭉 나열하고 주석으로 도움되는 팁들(🌟로 표시해두겠습니다.)을 기록하려 합니다. 코드 원본은 [링크](https://www.hanbit.co.kr/support/supplement_list.html)에서 받으실 수 있습니다.
+
 최근에는 HTML, CSS, Javascript를 활용해 네이티브 애플리케이션을 만드는 `React Native`, `Vue Native`등의 기술이 활성화되었습니다.<br/>
 이와 같은 방법으로 애플리케이션을 만들면, 아이폰 및 안드로이드 등의 애플리케이션을 따로 개발할 필요가 없이 모든 OS에서 실행할 수 있다는 장점이 있습니다. 👍
 

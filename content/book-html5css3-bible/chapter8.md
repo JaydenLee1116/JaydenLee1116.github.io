@@ -14,8 +14,7 @@ categories: 책 HTML CSS WEB
 
 ## 📖 1. 소셜커머스 메인 페이지
 
-레이아웃 관련 챕터의 경우 코드를 쭉 나열하고 주석으로 도움되는 팁들(🌟로 표시해두겠습니다.)을 기록하려 합니다. <br/>
-코드 원본은 [링크](https://www.hanbit.co.kr/support/supplement_list.html)에서 받으실 수 있습니다.
+> 코드를 쭉 나열하고 주석으로 도움되는 팁들(🌟로 표시해두겠습니다.)을 기록하려 합니다. 코드 원본은 [링크](https://www.hanbit.co.kr/support/supplement_list.html)에서 받으실 수 있습니다.
 
 ```html
 <!DOCTYPE html>
