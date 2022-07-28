@@ -1,7 +1,7 @@
 ---
 emoji: 📖
-title: 모던 웹을 위한 HTML5+CSS3 바이블 - 부록 A
-date: '2022-07-28 19:42:00'
+title: 모던 웹을 위한 HTML5+CSS3 바이블 - 부록 A, B
+date: '2022-07-28 23:33:00'
 author: 제이든
 tags: book html css web
 categories: 책 HTML CSS WEB
@@ -20,7 +20,7 @@ categories: 책 HTML CSS WEB
 1. 자바스크립트와 스타일시트 파일을 다운로드해서 사용
 2. `CDN(Content Delivery Network)을 사용`
 
-### 설정
+### 개요
 
 아래의 코드를 `<head>`에 넣어줍니다.
 
@@ -171,11 +171,197 @@ body {
 </body>
 ```
 
-## 📕 정리
+### 📕 부트스트랩 정리
 
 부트스트랩은 웹 페이지 디자인 프레임워크로 간편하게 웹 페이지를 만들기 좋습니다. 다만, 그만큼 다소 무겁고 정형화된 페이지를 만들어낸다는 단점도 있습니다.<br/>
 부트스트랩은 그 내용을 하나하나 외우고 하기보단 [부트스트랩 공식문서](https://getbootstrap.com/docs/5.2/getting-started/introduction/)를 보면서 필요한 기능들을
 구현하는 게 좋습니다.
+
+## 📖 2. Appendix B - Less 스타일시트
+
+스타일시트를 더 쉽게 사용하기 위해 다양한 스타일시트 엔진들이 등장했습니다.<br/>
+스타일시트 엔진은 특정한 형태의 스타일시트를 CSS 스타일시트로 변경해주는 <strong>변환 엔진</strong>`컴파일러`입니다.<br/>
+대표적으로 Sass 엔진과 Less 엔진이 있습니다.
+
+### 개요
+
+[Less 공식 홈페이지](http://lesscss.org/)에서 `less.js` 파일을 받습니다.<br/>
+이어서 html 파일과 less 확장자를 쓰는 파일을 생성해줍니다. 그럼 아래와 같이 파일이 준비됩니다.
+
+- less-1.3.0.min.js(less 홈페이지에서 받은 파일) -> 변환 엔진 역할
+- index.html
+- LessStyleSheet.less(마치 style.css처럼 스타일을 적을 파일입니다.)
+
+```html
+<head>
+  <title>Less StyleSheet Basic</title>
+  <link rel="stylesheet/less" type="text/css" href="LessStyleSheet.less" />
+  <script src="less-1.3.0.min.js"></script>
+</head>
+```
+
+LessStyleSheet.less 예제입니다.
+
+```less
+// 🌟 javascript와 같이 `/` 2개로 주석을 쓸 수 있습니다.(오예)
+// 🌟 선택자 내부에 선택자가 존재합니다. 조금 낯설지만 훨씬 가독성이 좋은 걸 알 수 있습니다.
+header {
+  width: 800px;
+  margin: 0 auto;
+
+  hgroup {
+    h1 {
+      color: red;
+    }
+
+    h2 {
+      color: blue;
+    }
+  }
+
+  nav {
+    ul {
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+  }
+}
+```
+
+### Less 컴파일러
+
+위의 구성처럼 변환 엔진 역할을 하는 Less.js 파일이 편리하긴 하지만, 굳이 유저에게까지 전달하면서 트래픽을 낭비할 필요가 없습니다.<br/>
+해서 [온라인 Less 컴파일러](http://winless.org/omline-less-compiler)에서 less 형식을 css 형식으로 바꿔서 가져올 수 있습니다.(공식 홈페이지에서도 가능합니다.)
+
+### 기본
+
+#### 변수
+
+Less 스타일시트는 변수를 만들 수 있습니다. 변수는 @ 기호를 사용하며 스타일시트에서 사용하는 모든 단위를 사용할 수 있습니다.
+
+```less
+@margin: 10px;
+@padding: 10px;
+@width: 200px;
+
+div {
+  width: @width - (@padding * 2);
+  padding: @padding;
+  margin: @margin;
+}
+```
+
+#### 내장 선택자
+
+선택자(A) 내부 선택자(B)가 있을 때, A의 내부에서 본인을 가리키는 선택자가 `내장 선택자`이고 `&`로 표현합니다.
+
+```less
+div {
+  background: black;
+  &:hover {
+    background: white;
+  }
+
+  a {
+    background: red;
+    color: white;
+    &:hover {
+      background: blue;
+    }
+    &:active {
+      background: green;
+    }
+  }
+}
+```
+
+#### 내장 함수
+
+Less 스타일시트에는 내장 함수도 있습니다. 잘 사용하면 굉장히 유용하지만, 여기에서는 따로 정리하지 않겠습니다. 🌵<br/>
+[Less 내장 함수 공식문서](https://lesscss.org/functions/)를 참고해주세요.
+
+#### 믹스인
+
+기본적인 내장 함수도 있지만, 우리가 직접 함수를 만들어 사용할 수도 있습니다!(오마이갓 🙀)<br/>
+`.이름(@변수1, @변수2, ...) {}` 형태로 함수를 만들어 사용합니다.
+
+```less
+.linearGradient(@start, @end) {
+  background: @start;
+  background: -moz-linear-gradient(top, @start 0%, @end 100%);
+  background: -webkit-linear-gradient(top, @start 0%, @end 100%);
+  background: -o-linear-gradient(top, @start 0%, @end 100%);
+  background: -ms-linear-gradient(top, @start 0%, @end 100%);
+  background: linear-gradient(top, @start 0%, @end 100%);
+}
+
+.button(@width, @height, @radius) {
+  width: @width;
+  height: @height;
+  line-height: @height;
+  text-align: center;
+  border-radius: @radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  margin: 10px;
+  float: left;
+
+  &:nth-child(1) {
+    .linearGradient(#0094ff, #004f89);
+    .button(200px, 100px, 10px);
+  }
+
+  &:nth-child(2) {
+    .linearGradient(#0094ff + #CC0000, #004f89 + #CC0000);
+    .button(200px, 100px, 10px);
+  }
+
+  &:nth-child(3) {
+    .linearGradient(#0094ff + #FF0000, #004f89 + #FF0000);
+    .button(200px, 100px, 10px);
+  }
+}
+```
+
+또한, 자료형을 확인하는 내장함수를 이용하여 주어진 변수가 원하는 자료형일 때만 함수가 실행되게 할 수 있습니다.
+
+```less
+.linearGradient(@start, @end) when (iscolor(@start)) and (iscolor(@end)) {
+  background: @start;
+  background: -moz-linear-gradient(top, @start 0%, @end 100%);
+  background: -webkit-linear-gradient(top, @start 0%, @end 100%);
+  background: -o-linear-gradient(top, @start 0%, @end 100%);
+  background: -ms-linear-gradient(top, @start 0%, @end 100%);
+  background: linear-gradient(top, @start 0%, @end 100%);
+}
+
+.max (@a, @b) when (@a > @b) {
+  width: @a;
+}
+.max (@a, @b) when (@a < @b) {
+  width: @b;
+}
+
+.min (@a, @b) when (@a > @b) {
+  width: @b;
+}
+.min (@a, @b) when (@a < @b) {
+  width: @a;
+}
+```
+
+### 📕 Less 스타일시트 정리
+
+기존 CSS에 프로그래밍 언어같은 기능들(변수, 내장 함수, 믹스인 등)을 통해 훨씬 간편하고 깔끔한 스타일시트를 만들 수 있게 해줍니다.<br/>
+개인적으로 이 책을 읽고 공부하면서 가장 신기하게 공부한 내용이었습니다. 🤩
 
 ```toc
 
