@@ -3,7 +3,7 @@ emoji: 🍊
 title: 자바스크립트란?
 date: '2022-07-29 14:00:00'
 author: 제이든
-tags: js
+tags: js 정의
 categories: JAVASCRIPT
 ---
 
