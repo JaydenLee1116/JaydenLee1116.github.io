@@ -121,7 +121,7 @@ body {
     <div class="container">
       <a class="navbar-brand" href="#">Bootstrap</a>
       <!-- 🌟 button 태그에 data-target="#navbar-content"를 통해
-       id="navbar-content"인 태그를 버트은 통해 열고 닫을 대상으로 지정합니다. -->
+       id="navbar-content"인 태그를 버튼을 통해 열고 닫을 대상으로 지정합니다. -->
       <button
         class="navbar-toggler"
         type="button"
@@ -234,7 +234,7 @@ header {
 ### Less 컴파일러
 
 위의 구성처럼 변환 엔진 역할을 하는 Less.js 파일이 편리하긴 하지만, 굳이 유저에게까지 전달하면서 트래픽을 낭비할 필요가 없습니다.<br/>
-해서 [온라인 Less 컴파일러](http://winless.org/omline-less-compiler)에서 less 형식을 css 형식으로 바꿔서 가져올 수 있습니다.(공식 홈페이지에서도 가능합니다.)
+해서 [온라인 Less 컴파일러](https://jsonformatter.org/less-to-css)에서 less 형식을 css 형식으로 바꿔서 가져올 수 있습니다.(공식 홈페이지에서도 가능합니다.)
 
 ### 기본
 

@@ -89,7 +89,7 @@ categories: 책 HTML CSS WEB
     </style>
     <!-- 네비게이션_위 -->
     <style>
-      /* 🌟 자손 태그에 float 속성을 정굑하면 부모 태그에 overflow: hidden; 을 적용합니다. 💯 */
+      /* 🌟 자손 태그에 float 속성을 적용하면 부모 태그에 overflow: hidden; 을 적용합니다. 💯 */
       #top_gnb {
         overflow: hidden;
       }
@@ -277,7 +277,7 @@ categories: 책 HTML CSS WEB
     </style>
     <!-- 목록 -->
     <style>
-      /* 🌟 자손 태그에 float 속성을 정굑하면 부모 태그에 overflow: hidden; 을 적용합니다. 💯 */
+      /* 🌟 자손 태그에 float 속성을 적용하면 부모 태그에 overflow: hidden; 을 적용합니다. 💯 */
       #detail_list {
         overflow: hidden;
         padding: 10px;
