@@ -1,6 +1,6 @@
 ---
 emoji: 🔨
-title: GetShitDone-1
+title: teo-sprint12-1
 date: '2022-10-12 23:55:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
