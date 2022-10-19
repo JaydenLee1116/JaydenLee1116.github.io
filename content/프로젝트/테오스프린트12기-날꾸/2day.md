@@ -1,6 +1,6 @@
 ---
 emoji: 🔨
-title: teo-sprint12-2
+title: teo-sprint12-Day 2
 date: '2022-10-13 23:55:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
