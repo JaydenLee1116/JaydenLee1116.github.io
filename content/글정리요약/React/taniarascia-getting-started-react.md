@@ -3,8 +3,8 @@ emoji: 📖
 title: 221109(수)
 date: '2022-11-09 13:55:00'
 author: 제이든
-tags: 기록 일지 성장 발전 개발
-categories: 성장일지
+tags: 글 문서 요약
+categories: 글정리요약 React
 ---
 
 ## 📚 Taniarascia의 getting-started-with-react
