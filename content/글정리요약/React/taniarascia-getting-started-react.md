@@ -1,15 +1,15 @@
 ---
 emoji: 📖
-title: 221109(수)
+title: Getting Started With React
 date: '2022-11-09 13:55:00'
 author: 제이든
 tags: 글 문서 요약
-categories: 글정리요약 React
+categories: SUMMARY REACT
 ---
 
 ## 📚 Taniarascia의 getting-started-with-react
 
-이 글은 ![Taniarascia의 getting-started-with-react](https://www.taniarascia.com/getting-started-with-react/)를 한국어로 요약한 정리 글입니다. 공부 목적으로 요약한 주관적인 내용입니다. 😀
+이 글은 [Taniarascia의 getting-started-with-react](https://www.taniarascia.com/getting-started-with-react/)를 한국어로 요약한 정리 글입니다. 공부 목적으로 요약한 주관적인 내용입니다. 😀
 
 ### 리액트란?
 
