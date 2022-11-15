@@ -29,13 +29,13 @@ function example = (a, b) => a + b;
 // 이 때, 1과 2가 변수로 들어갔을 때, 3이 나오는지 테스트 -> 단위 테스트
 ```
 
-- 통합 테스트 : 모듈과 모듈 간의 관계를 테스트하는 것을 말합니다. 단위 테스트보다 작성이 어렵고속도가 느립니다. 실패 시에, 어떤 모듈에서 실패한건지 혹은 모듈 각각은 문제가 없더라도 어떤 상호작용에서 문제가 생긴 것인지 등등 다소 정확히 문제 원인을 파악하기가 어렵다는 단점이 있습니다.
+- 통합 테스트 : 모듈과 모듈 간의 관계를 테스트하는 것을 말합니다. 단위 테스트보다 작성이 어렵고 속도가 느립니다. 실패 시에, 어떤 모듈에서 실패한건지 혹은 모듈 각각은 문제가 없더라도 어떤 상호작용에서 문제가 생긴 것인지 등등 다소 정확히 문제 원인을 파악하기가 어렵다는 단점이 있습니다.
 
 - E2E 테스트 : 통합 테스트보다 더 큰 개념으로, 유저의 행동에 따라 이뤄지는 어플리케이션의 시작과 끝까지의 테스트입니다.
 
 ### Cypress 다루기
 
-먼저 Cypress를 설치해야합니다. 뭐가 됐든, 처음 배울 때는 꼭꼭꼭 공식문서[cypress](https://docs.cypress.io/guides/getting-started/installing-cypress#What-you-ll-learn)를 들어가서 열심히 getting started를 찾아서 눌러보도록 합니다!!
+먼저 Cypress를 설치해야합니다. 뭐가 됐든, 처음 배울 때는 꼭꼭꼭 공식문서([cypress](https://docs.cypress.io/guides/getting-started/installing-cypress#What-you-ll-learn))를 들어가서 열심히 getting started를 찾아서 눌러보도록 합니다!!
 
 기존 프로젝트 root 디렉토리에서 아래의 명령어로 cypress를 설치합니다.
 
@@ -87,8 +87,8 @@ describe('어떤 어플리케이션인지 적어주세요.', () => {
 
 ### Reference
 
-[인프런(메이커준 - 하루만에 Cypress로 작성하는 자바스크립트 E2E 테스트 코드](https://www.inflearn.com/course/%EC%8B%B8%EC%9D%B4%ED%94%84%EB%A0%88%EC%8A%A4-%ED%85%8C%EC%8A%A4%ED%8A%B8/dashboard)
-[Cypress 공식문서](https://docs.cypress.io/guides/overview/why-cypress)
+- [인프런(메이커준 - 하루만에 Cypress로 작성하는 자바스크립트 E2E 테스트 코드](https://www.inflearn.com/course/%EC%8B%B8%EC%9D%B4%ED%94%84%EB%A0%88%EC%8A%A4-%ED%85%8C%EC%8A%A4%ED%8A%B8/dashboard)
+- [Cypress 공식문서](https://docs.cypress.io/guides/overview/why-cypress)
 
 ```toc
 
