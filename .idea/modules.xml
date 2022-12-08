@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../178d97b04c14637f4af6961a4a812a67/.idea/178d97b04c14637f4af6961a4a812a67.iml" filepath="$PROJECT_DIR$/../178d97b04c14637f4af6961a4a812a67/.idea/178d97b04c14637f4af6961a4a812a67.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jayden-blog-gatsby.iml" filepath="$PROJECT_DIR$/.idea/jayden-blog-gatsby.iml" />
     </modules>
   </component>
