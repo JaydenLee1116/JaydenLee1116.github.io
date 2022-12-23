@@ -15,11 +15,11 @@ module.exports = {
     bio: {
       role: `프론트엔드 개발자`,
       description: [
-        '인생을 여행하는',
-        '세상에 기여하는',
-        '이로움을 행하는',
-        '행복을 추구하는',
         '매일 기록하는',
+        '지금을 살아가는',
+        '새로움에 도전하는',
+        '세상에 기여하는',
+        '행복을 추구하는',
       ],
       thumbnail: 'jayden-emoji-ani.gif', // Path to the image in the 'asset' folder
     },
@@ -69,10 +69,17 @@ module.exports = {
         },
       },
       {
-        date: '2022.08 ~ ',
+        date: '2022.08 ~ 2022.11',
         activity: 'F-lab 프론트엔드 멘토링 참여',
         links: {
           post: 'https://f-lab.kr/',
+        },
+      },
+      {
+        date: '2023.01 ~ ',
+        activity: '코드스쿼드 프론트엔드 마스터즈',
+        links: {
+          post: 'https://codesquad.kr/',
         },
       },
     ],
@@ -98,7 +105,7 @@ module.exports = {
       {
         title: '업데이트 예정',
         description: '업데이트 예정입니다.',
-        techStack: ['HTML', 'CSS', 'Javascript'],
+        techStack: ['HTML', 'CSS', 'Javascript', 'Typescript', 'React.js'],
         thumbnailUrl: 'sample.png', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/JaydenLee1116',
