@@ -61,7 +61,7 @@ module.exports = {
         },
       },
       {
-        date: '2022.04 ~ ',
+        date: '2022.06 ~ ',
         activity: '웹 개발(프론트엔드) 공부 시작',
         links: {
           github: 'https://github.com/JaydenLee1116',
