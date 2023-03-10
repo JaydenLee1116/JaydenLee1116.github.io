@@ -27,13 +27,30 @@ categories: 성장일지
 
 ### CSS BEM 다시 적용하기
 
+- `Block__Element--Modifier` 형태로 모든 태그에 클래스 붙이기
+
+```js
+<body>
+  <div class='wrapper'>
+    <div class='wrapper__main'></div>
+    <div class='wrapper__sub'></div>
+  </div>
+</body>
+```
+
+### html 전체적인 레이아웃 잡기
+
+- 큰 틀 자체는 `%`로 잡고 그 안에 좀더 구체적인 부분은 `rem`으로 잡자.
+  - 이게 효율적인건지는 모르겠지만, 일단 편하고 반응형으로 대응하기도 좋은 것 같다.
+
 ## 참고
 
 - [CSS BEM](https://nykim.work/15)
 
 ## 📝 요약 및 하루 간단 회고
 
-- 작성 중
+예비군 다녀오느라 미션을 구현할 시간이 많지 않았다. 그럼에도 정말 시간을 쪼개고 쪼개서 html, css을 좀더 명확한 BEM으로 전부 갈아엎었다.
+주어진 시간 내에서 정말 알차게 보낸 것 같다!
 
 ## 오늘의 잘한 점
 
