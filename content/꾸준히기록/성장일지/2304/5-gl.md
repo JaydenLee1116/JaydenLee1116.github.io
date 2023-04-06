@@ -29,7 +29,22 @@ categories: 성장일지
 
 ### 이미 push한 파일 다시 .gitignore로 처리하기
 
+```shell
+git rm --cached <fileName> # 특정 파일만 다시 처리할 때
+git rm --cached . # 현재 디렉토리 기준 모든 파일 다시 처리할 때
+```
+
+위의 명령을 실행해주고 `.gitignore`에 무시할 파일 적은 뒤 다시 add, commit, push를 진행해주면 된다.
+
 ### interface와 abstract class 
+
+이 둘의 차이를 찾아보게 된 계기
+
+- interface로 class를 좀더 추상화해서 작성하는데, class에서 사용할 private 프로퍼티가 inteface에서는 선언 자체가 안되어서 방법을 생각하던 중 찾아보게 되었다.
+- interface에서 선언하는 것은 전부 pubilc만 가능하다.(애초에 공개적인 규격 내지 청사진, 설계도 정도로 생각하면 된다.)
+- 다만, abstract class는 interface와 아주 유사하면서 동시에 class이다. 그렇지만 class처럼 생성자로서의 역할은 하지못하고(인스턴스를 만들지 못한다.) 인터페이스만큼 유연하지 않다.
+  - 또한, abstract class는 그래도 class이기 때문에 implements 가 아닌 extends를 통해서 `구현`보단 `상속`의 개념이 강하다. 그만큼 더 강한 규격이 만들어진다.
+  - 그래서 private, protected 프로퍼티 또한 선언할 수 있다.
 
 ### 계획
 
