@@ -771,6 +771,84 @@ export default class ItemFilter extends Component {
 }
 ```
 
+---
+
+## 스터디 이후
+
+### Template Method Pattern(템플릿 메서드 패턴)
+
+- 객체지향 프로그래밍의 디자인 패턴 중 하나
+- 알고리즘의 구조를 메서드에 정의하고, 하위 클래스에서 알고리즘 구조의 변경없이 해당 알고리즘을 재정의하여 사용하는 패턴이다.
+- 알고리즘이 단계별로 나누어지는 경우 혹은 같은 역할을 하는 메서드지만 여러 곳에서 다른 형태로 사용이 필요한 경우 유용한 패턴이다.
+- 상속을 통해서 슈퍼클래스의 기능을 확장할 때 사용하는 대표적인 방법이다. 변하지 않는 기능은 슈퍼 클래스에 만들어두고 자주 변경되며 확장할 기능은 서브 클래스에서 구현한다.
+
+```ts
+class SuperClass {
+  constructor() {
+    // 컨스트럭터
+  }
+  
+  superLog() {
+    console.log('슈퍼클래스에서 정의한 메서드');
+    this.subLog();
+  }
+  
+  subLog() {
+    console.log('서브클래스에서 변경하며 사용할 메서드')
+  }
+}
+
+class SubClass extends SuperClass {
+  constructor() {
+    // 컨스트럭터
+    super();
+  }
+
+  subLog() {
+    console.log('서브클래스에서 지금 변경한 메서드')
+  }
+}
+
+const sub = new SubClass();
+sub.superLog();
+
+/* log
+슈퍼클래스에서 정의한 메서드
+서브클래스에서 지금 변경한 메서드
+ */
+```
+
+위와 같이 `SubClass`로 생성된 `sub`객체가 `superLog`를 호출할 경우, SubClass에서 오버라이딩된 `subLog`가 호출되는 것을 볼 수 있다.
+
+### reduce는 언제나 좋을까?(feat. map, join)
+
+스터디원마다 편안한(?) 고차함수가 달랐다. 아래는 이야기를 나누며 나온 예시
+
+```js
+const names = ['jayden', 'den', 'zoey', 'lily', 'bakha'];
+
+const literalWithReduce = names.reduce((acc, cur) => {
+  return acc + `<li>${cur}</li>`;
+}, '');
+
+const literalWithMapJoin = names.map((name) => `<li>${name}</li>`).join('');
+```
+
+예시의 경우 2가지 모두 names 배열의 원소들을 받아서 li 태그 형태로 만든 후 문자열을 합친 literal을 반환한다. 정답은 없겠지만 reduce를 활용하는 경우, 고차함수 하나로 문자열을 추가하고 각 배열의 원소를
+합칠 수 있다는 점에서 아주 약간의 성능 우위가 있을 것 같다. 반면 map, join은 names라는 배열을 2번 순회하기는 하지만, 함수형 프로그래밍에서 지향하는 선언형의 느낌을 정말 잘 보여준다고 생각한다.
+(누가봐도 배열에 mapping을 하고 join을 통해 배열의 각 요소를 합쳐주고 있으니까)
+
+나의 개인적인 결론은 다채롭게 활용가능하고 성능상의 우위를 점할 수 있는 reduce를 사용하되, 그 reduce에 전달하는 callback을 따로 분리하여 좀더 명확한 이름을 지어주는 게 좋다는 것이다.
+
+```js
+const names = ['jayden', 'den', 'zoey', 'lily', 'bakha'];
+const getListTags = (acc, cur) => acc + `<li>${cur}</li>`;
+
+const literalWithReduce = names.reduce(getListTags, '');
+```
+
+
+
 # 참고
 
 - [개발자 황준일 - Vanilla Javascript로 웹 컴포넌트 만들기 1편](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/#_1-%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%82%E1%85%A5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5)
