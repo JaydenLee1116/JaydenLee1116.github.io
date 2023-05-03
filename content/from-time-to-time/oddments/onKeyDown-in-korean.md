@@ -73,7 +73,7 @@ return (
 - `Enter-13`
 ![Enter-13](./src/on-key-down-4.png)
 
-뭔가 이상하다. 첫번째 `ㅇ`과 두번째 `Enter`가 분명히 다른 키인데 왜 같은 key 값을 갖는걸까?
+뭔가 이상하다. 첫번째 `ㅇ`과 두번째 `Enter`가 분명히 다른 키인데 왜 같은 keyCode 값을 갖는걸까?
 
 이를 알기 위해서는 [IME KeyCode 229 Issue(feat. Chrome + 한글)](https://minjung-jeon.github.io/IME-keyCode-229-issue/)를 참고하자.
 
