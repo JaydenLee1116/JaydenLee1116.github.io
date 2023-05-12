@@ -1,6 +1,6 @@
 ---
 emoji: 🎾
-title: (Vanilla JS로 웹 컴포넌트 만들기 by 황준일님) 1편
+title: (Vanilla JS로 웹 컴포넌트 만들기 by 황준일님) 2편
 date: '2023-04-19 23:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
