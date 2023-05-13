@@ -1,7 +1,7 @@
 ---
 emoji: 🎾
 title: (Vanilla JS로 웹 컴포넌트 만들기 by 황준일님) 2편
-date: '2023-04-19 23:30:00'
+date: '2023-04-26 23:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
 categories: 스터디
@@ -688,6 +688,7 @@ export const createStore = (reducer) => {
   // reducer가 실행될 때 반환하는 객체(state)를 observable로 만들어야 한다.
   // Q. 여기서 state를 observable하는 게 의미가 있나..???
   // observable을 적용한 initialState를 받는 걸로 이해하면 될까?
+  // 어떤 것도 observe 하지 않는다면, observable은 아무런 의미가 없지 않나..?
   const state = observable(reducer());
 
   // getState가 실제 state를 반환하는 것이 아니라 frozenState를 반환하도록 만들어야 한다.

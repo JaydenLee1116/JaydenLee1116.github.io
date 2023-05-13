@@ -31,7 +31,7 @@ categories: 스터디
 - HTML을 토대로 DOM Tree를 생성한다.
   - Bytes: HTML을 바이트 단위로 읽는다. ex) `3C 62 6F 64 ... `
   - Characters: 바이트를 문자 단위로 읽는다. ex) `<html><head>...<body>...</html>`
-  - Tokens: 문자를 토큰 단위로 읽는다. ex) `StartTag`: html, `startTag`: head, ... , `EndTag`: html
+  - Tokens: 문자를 토큰 단위로 읽는다. ex) `StartTag`: html, `StartTag`: head, ... , `EndTag`: html
   - Nodes: 토큰을 노드 단위로 읽는다. ex) `Element`: html, `Element`: head, ... , `Element`: html
   - DOM: 노드를 통해 DOM Tree를 생성한다. ex) `Element`: html -> `Element`: head -> ... -> `Element`: html
 
