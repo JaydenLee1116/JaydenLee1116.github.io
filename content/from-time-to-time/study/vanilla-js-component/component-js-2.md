@@ -1,6 +1,6 @@
 ---
 emoji: 🎾
-title: (Vanilla JS로 웹 컴포넌트 만들기 by 황준일님) 2편
+title: (Vanilla JS로 상태관리 시스템 만들기 by 황준일님) 2편
 date: '2023-04-26 23:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
@@ -806,6 +806,6 @@ export class App extends Component {
 
 # 참고
 
-- [개발자 황준일 - Vanilla Javascript로 상태관리 시스템 만들기](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Store/#_7-redux-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5)
+- [개발자 황준일 - Vanilla Javascript로 상태관리 시스템 만들기](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Store/)
 - [Redux 공식문서 - 시작하기](https://ko.redux.js.org/introduction/getting-started/)
 - [MDN - Object.defineProperty()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)

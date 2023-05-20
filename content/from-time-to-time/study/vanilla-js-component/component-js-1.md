@@ -14,7 +14,7 @@ categories: 스터디
 
 ## 들어가기에 앞서
 
-이 내용은 [개발자 황준일 - Vanilla Javascript로 웹 컴포넌트 만들기 1편](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/#_1-%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%82%E1%85%A5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5)을
+이 내용은 [개발자 황준일 - Vanilla Javascript로 웹 컴포넌트 만들기 1편](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/)을
 공부하며 작성한 글입니다. 대부분의 내용을 황준일님의 블로그를 참고하였고 몇개의 개념 내용 정도만 추가 혹은 내용 요약이 되어있습니다. 자세한 사항은 황준일님의 블로그를 참고해주세요!(정말 너무 좋은 글이에요~!)
 
 # Vanilla Javascript로 웹 컴포넌트 만들기 - 1
@@ -851,7 +851,7 @@ const literalWithReduce = names.reduce(getListTags, '');
 
 # 참고
 
-- [개발자 황준일 - Vanilla Javascript로 웹 컴포넌트 만들기 1편](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/#_1-%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%82%E1%85%A5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5)
+- [개발자 황준일 - Vanilla Javascript로 웹 컴포넌트 만들기 1편](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/)
 - [크로스 브라우징](https://pxd-fed-blog.web.app/cross-browsing/)
 - [카카오테크 - GraphQL 개념잡기](https://tech.kakao.com/2019/08/01/graphql-basic/)
 - [리액트 컴포넌트 생애주기 다이어그램](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)

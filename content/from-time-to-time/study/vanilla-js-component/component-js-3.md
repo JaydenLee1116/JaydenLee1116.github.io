@@ -1,6 +1,6 @@
 ---
 emoji: 🎾
-title: (Vanilla JS로 웹 컴포넌트 만들기 by 황준일님) 3편 
+title: (Vanilla JS로 가상돔 만들기 by 황준일님) 3편 
 date: '2023-05-12 23:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
@@ -14,7 +14,7 @@ categories: 스터디
 
 ## 들어가기에 앞서
 
-이 내용은 [개발자 황준일 - Vanilla Javascript로 상태관리 시스템 만들기](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Store/#_7-redux-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5)을
+이 내용은 [개발자 황준일 - Vanilla Javascript로 가상돔 만들기](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Virtual-DOM/)을
 공부하며 작성한 글입니다. 대부분의 내용을 황준일님의 블로그를 참고하였고 몇개의 개념 내용 정도만 추가 혹은 내용 요약이 되어있습니다. 자세한 사항은 황준일님의 블로그를 참고해주세요!(정말 너무 좋은 글이에요~!)
 
 # Vanilla Javascript로 가상돔(VirtualDOM) 만들기
@@ -95,3 +95,7 @@ categories: 스터디
 
 - `렌더링 과정`에서 성능을 제일 많이 잡아 먹는다.
 - `re-플로우`가 순간적으로 많이 발생하는 경우 성능이 저하된다.
+
+# 참고
+
+- [개발자 황준일 - Vanilla Javascript로 가상돔 만들기](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Virtual-DOM/)
