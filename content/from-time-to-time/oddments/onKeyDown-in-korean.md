@@ -83,7 +83,7 @@ return (
 
 그렇다면 이제 해결책은 간단해보인다! if 조건문으로 keyCode 혹은 which 값이 229인 경우 `early return` 시키면 된다.
 
-이렇게 해결은 됐지만, 경고가 하나 등장한다. 바로 keyCode와 whice는 곧 deprecated 될 예정이라는 경고이다.
+이렇게 해결은 됐지만, 경고가 하나 등장한다. 바로 keyCode와 which는 곧 deprecated 될 예정이라는 경고이다.
 그렇다면 마지막 남은 수단이 있다. 바로 `e.isComposing`을 사용하는 것이다. 그런데 또 하나 주의할 점은, 리액트 `onKeyDown` 이벤트는 한번 감싸진 상태이기 때문에
 `e.nativeEvent.isComposing`을 통해 접근하면 된다.
 
