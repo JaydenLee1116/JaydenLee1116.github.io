@@ -12,8 +12,6 @@ categories: 공식문서 스터디
 이 글은 [리액트 공식문서 - 함수 컴포넌트](https://react.dev/)를 읽고 작성한 글입니다. 모든 내용을 다루지는 않고 개인적으로 부족했다고 느꼈던 부분, 새롭게
 알게 된 부분들을 간단하게 정리할 예정입니다.
 
-## Learn React - Adding Interactivity
-
 # Learn React - Adding Interactivity
 
 리액트에서는 `시간이 지남에 따라 변하는 데이터`를 모두 `state`라고 한다.
@@ -455,3 +453,211 @@ state는 컴포넌트에 의해 완전히 캡슐화된다. 즉, state는 컴포�
 
 만약 state를 두개의 컴포넌트가 공유하고 동기화하려면 가장 가까운 부모 컴포넌트에 두어 props로 전달해야 한다.
 
+## Render and Commit
+
+컴포넌트를 화면에 표시하기 전에 React에서 렌더링을 해야 한다. <br/>
+리액트가 고객들의 요청을 받고 주문을 가져오는 웨이터라고 생각해보자. 그리고 주방에서는 컴포넌트를 재료로 요리를 하고 있다. UI를 요청하고 서빙하는 과정은 아래 3단계로 이루어진다.
+
+1. Triggering a render: 컴포넌트가 렌더링을 시작하도록 트리거한다. => 손님의 주문을 주방으로 전달한다.
+2. Rendering the component: 컴포넌트가 렌더링을 수행한다. => 주방 주문을 받아 요리한다.
+3. Committing to the DOM: DOM에 커밋한다. => 손님에게 요리를 내놓는다.
+
+### Step 1: Trigger a render
+
+컴포넌트의 렌더링이 일어나는 데에는 2가지의 이유가 있다.
+
+- 컴포넌트가 처음으로 렌더링되는 경우
+
+> 앱을 시작하기 위해서는 첫 렌더링을 해야 한다.
+
+```jsx
+import Image from './Image.js';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.getElementById('root'))
+root.render(<Image />); // 첫 번째 렌더링
+```
+
+- 컴포넌트의 state나 props(부모 컴포넌트를 통해 전달된 state)가 변경되어 다시 렌더링되는 경우
+
+> `setState`로 state를 변경하여 추가로 렌더링할 수 있다. 컴포넌트의 state를 업데이트하면 자동으로 렌더링이 대기열에 추가된다.
+> (식당에서 손님이 첫 주문 이후에 추가 주문을 하는 것과 같다.)
+
+### Step 2: React renders your components
+
+렌더링을 trigger하면, 리액트는 함수 컴포넌트를 호출하여 화면에 표시할 내용을 파악한다. 즉, `렌더링`은 리액트에서 함수 컴포넌트를 호출하는 것이다.
+
+- 첫 렌더링에서는 루트 컴포넌트를 호출한다.
+- 이후 렌더링에서는 state의 업데이트에 의해 렌더링이 발동된 함수 컴포넌트를 호출한다.
+
+위의 과정 자체는 `재귀적`으로 동작한다. 업데이트된 컴포넌트가 다른 컴포넌트(자식 컴포넌트)를 번환하면 다음으로 해당 컴포넌트를 렌더링하고 또 그 컴포넌트가 다른
+컴포넌트를 반환하면 해당 컴포넌트를 렌더링한다. 중첩된 컴포넌트가 더이상 존재하지 않고 화면에 표시되어야 하는 내용을 정확히 알 때까지 계속된다.
+
+> 렌더링은 항상 순수 계산이어야 한다.<br/>
+> 1. 동일한 입력에 대해서 동일한 출력이 반환되어야 한다.<br/>
+> 2. 함수 외부의 어떤 것도 변경해서는 안된다.<br/>
+
+> Optimizing performance<br/>
+> 업데이트된 컴포넌트 내에 있는 모든 컴포넌트를 렌더링하는 행위는 비효율적이다.(특히 업데이트된 컴포넌트가 상위에 있을수록!)<br/>
+> 성급하게 최적화하지 않도록 해라!
+
+### Step 3: React commits changes to the DOM
+
+리액트는 컴포넌트를 렌더링(호출)한 후, DOM을 수정한다.
+
+1. 첫 렌더링의 경우, 리액트는 `appendChild()` DOM api를 사용하여 생성한 모든 DOM 노드를 화면에 표시한다.
+2. 이후 렌더링(리렌더링)의 경우, 리액트는 필요한 최소한의 작업(렌더링 중 계산된 작업)을 적용하여 DOM이 최신 렌더링 출력과 일치시킨다.
+
+리액트는 렌더링 사이에 차이가 있는 경우에만 DOM 노드를 변경한다. 아래와 같이 매초마다 time이 변경될 때(리렌더링이 발생), input의 내부에 있는 value state는
+그 값이 사라지지 않고 유지된다.
+
+```jsx
+export default function Clock({ time }) {
+  return (
+    <>
+      <h1>{time}</h1>
+      <input />
+    </>
+  );
+}
+```
+
+### Epilogue: Browser paint
+
+렌더링이 완료되고 리액트가 DOM을 업데이트한 후, 브라우저는 화면을 다시 그린다. 이 부분을 `브라우저 렌더링`이라고 하지만, 현재 공식문서에서는 혼동을 피하고자 `페인팅`이라고 부른다.
+
+## State as a Snapshot
+
+state는 스냅샷처럼 동작한다. state 변수를 설정해도 이미 가지고 있는 state 변수는 변경되지 않고, 그 대신 리렌더링이 실행된다.
+
+```jsx
+import { useState } from 'react';
+
+export default function Form() {
+  const [isSent, setIsSent] = useState(false);
+  const [message, setMessage] = useState('Hi!');
+  if (isSent) {
+    return <h1>Your message is on its way!</h1>
+  }
+  return (
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      setIsSent(true);
+      sendMessage(message);
+    }}>
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={e => setMessage(e.target.value)}
+      />
+      <button type="submit">Send</button>
+    </form>
+  );
+}
+
+function sendMessage(message) {
+  // ...
+}
+```
+
+- onSubmit 이벤트 핸들러가 실행된다.
+- setIsSent(true)가 isSent를 true로 설정하고 새 렌더링을 큐에 대기시킨다..
+- 리액트는 isSent 값에 따라서 컴포넌트를 다시 렌더링한다.
+
+### Rendering takes a snapshot in time
+
+`렌더링`이란 리액트가 컴포넌트, 즉 함수를 호출한다는 의미이다. 해당 함수에서 반환하는 JSX는 그 순간의 UI 스냅샷과 같다.
+
+React가 컴포넌트를 리렌더링할 때,
+
+- 리액트가 함수를 다시 호출한다.
+- 함수가 새로운 JSX 스냅샷을 반환한다.
+- 이후, 리액트는 이전 스냅샷과 새 스냅샷을 비교하고 일치하도록 화면을 업데이트한다.
+
+컴포넌트의 메모리로서 state는 함수가 반환된 후 사라지는 일반 변수와는 다르다. state는 함수 외부에 존재하는 변수처럼 React 자체에 존재한다.
+
+<img src="https://react-ko.dev/images/docs/illustrations/i_state-snapshot2.png" width=200 alt="리액트가 state를 메모">
+
+아래의 코드를 보면 버튼을 1번 클릭할 때마다, number는 3씩 증가할 것 같다. 하지만 number는 1씩 증가한다.
+
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 1);
+        setNumber(number + 1);
+        console.log(number);
+        setNumber(number + 1);
+      }}>+3</button>
+    </>
+  )
+}
+```
+
+`setState`를 실행하면 `이전 렌더링`에 대해서만 state가 변경된다. 즉, 아무리 setNumber를 호출했어도 이전 렌더링에서 number는 0이기 때문에 1만 증가하는 것이다.
+그렇기 때문에 중간에 console.log를 찍어보면 0이 찍히는 것을 확인할 수 있다.
+
+### State over time
+
+아래 코드를 실행해보면 3초 뒤 alert 값으로도 0이 찍히는 것을 확인할 수 있다.
+
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 5);
+        setTimeout(() => {
+          alert(number);
+        }, 3000);
+      }}>+5</button>
+    </>
+  )
+}
+```
+
+왜 그럴까? 이는 사용자가 버튼을 클릭하는 시점에서 number는 0이기 때문이다. setTimeout은 3초 뒤에 실행되기 때문에, 3초 뒤에 실행되는 alert에서도 number가 0이다.(3초 뒤에 number가 0인 스냅샷이 사용하기 때문이다.)<br/>
+리액트는 하나의 렌더링 이벤트 핸들러 내에서 state값을 `고정`으로 유지한다. 즉, 코드가 실행되는 동안 state가 변경되었는지 걱정할 필요가 없다.
+
+## Queueing a Series of State Updates
+
+state 변수를 설정하면 다음 렌더링이 큐에 들어간다. 그러나 경우에 따라서 다음 렌더링을 큐에 전달하기 전에, state에 대해 여러 작업을 수행하고 싶을 수 있다.
+
+### React batches state updates
+
+리액트는 state 업데이트를 하기 전에 이벤트 핸들러의 모든 코드가 실행될 때까지 기다린다. 때문에 리렌더링은 모든 `setState` 호출이 완료된 이후에만 일어난다.
+이는 음식점에서 주문을 받는 웨이터와 같다. 우리가 a,b,c라는 음식을 주문한다면 웨이터는 우리가 a를 말하자마자 주문을 전달하지 않는다. 대신에 우리가 주문을 완료할 때까지 기다린다. 그리고 우리가 주문을 완료하면 웨이터는 주문을 전달한다.
+심지어 다른 테이블의 주문까지 한번에 받아서 전달한다.
+
+이렇게 하면 여러 컴포넌트에서 나온 여러 state 변수를 업데이트함에 따라 리렌더링을 trigger하지 않을 수 있다. 이 말은 이벤트 핸들러와 그 내부에 있는 코드가 완료될 때까지
+UI가 업데이트되지 않는다는 것이다.
+
+반면 리액트는 클릭과 같은 여러 의도적인 이벤트에 대해 일괄 처리 하지 않는다. 각 이벤트는 개별적으로 처리 된다.
+
+### Updating the same state multiple times before the next render
+
+다음 렌더링 전에 동일한 state 변수를 여러번 업데이트 하고 싶을 때, `setState((prev) => prev + 1)`와 같이 함수를 인자로 넘겨주면 된다.
+이는 이전 렌더링에서의 state를 참조하는 것이 아닌 state 큐의 이전 state를 참조하기 때문에 가능하다.
+
+> 참고: setState(5) 또한 setState(prev => 5)처럼 동작한다.
+
+### Naming conventions
+
+업데이터 함수 인수(콜백 함수)의 이름은 해당 state 변수의 첫 글자로 지정하는 것이 일반적이다.
+
+```jsx
+setEnabled(e => !e);
+setLastName(ln => ln.reverse());
+setFriendCount(fc => fc * 2);
+```
