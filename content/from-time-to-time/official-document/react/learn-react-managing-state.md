@@ -1,7 +1,7 @@
 ---
 emoji: 📜
-title: react - Learn React(Describing the UI)
-date: '2023-05-28 10:00:00'
+title: react - Learn React(Managing State)
+date: '2023-06-11 10:00:00'
 author: 제이든
 tags: 글 문서 요약
 categories: 공식문서 스터디
