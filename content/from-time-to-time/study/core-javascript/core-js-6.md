@@ -4,7 +4,7 @@ title: (코어 자바스크립트) 4. 콜백함수
 date: '2023-02-19 22:00:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
-categories: 스터디
+categories: 스터디 책
 ---
 
 ## 🏀 기술책 스터디

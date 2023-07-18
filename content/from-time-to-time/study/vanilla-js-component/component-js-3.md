@@ -4,7 +4,7 @@ title: (Vanilla JS로 가상돔 만들기 by 황준일님) 3편
 date: '2023-05-12 23:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
-categories: 스터디
+categories: 스터디 아티클
 ---
 
 ## 🎾 기술책 스터디

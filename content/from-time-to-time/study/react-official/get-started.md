@@ -4,7 +4,7 @@ title: react - get started
 date: '2023-05-03 10:00:00'
 author: 제이든
 tags: 글 문서 요약
-categories: 공식문서 스터디
+categories: 스터디 공식문서
 ---
 
 ## 📎 React

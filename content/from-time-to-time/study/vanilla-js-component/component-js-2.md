@@ -4,7 +4,7 @@ title: (Vanilla JS로 상태관리 시스템 만들기 by 황준일님) 2편
 date: '2023-04-26 23:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
-categories: 스터디
+categories: 스터디 아티클
 ---
 
 ## 🎾 기술책 스터디
