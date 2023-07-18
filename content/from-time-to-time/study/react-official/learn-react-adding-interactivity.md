@@ -661,3 +661,7 @@ setEnabled(e => !e);
 setLastName(ln => ln.reverse());
 setFriendCount(fc => fc * 2);
 ```
+
+```toc
+
+```
