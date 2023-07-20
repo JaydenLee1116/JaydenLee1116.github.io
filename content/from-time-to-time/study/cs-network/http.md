@@ -1,6 +1,6 @@
 ---
 emoji: 🧷
-title: CS-Network. 쿠키와 세션에 대해
+title: CS-Network. HTTP에 대해
 date: '2023-07-17 22:00:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
