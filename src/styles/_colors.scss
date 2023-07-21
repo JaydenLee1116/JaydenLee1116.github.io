@@ -1,53 +1,69 @@
 // light mode colors
+// 제이든 옐로우: #fabe59
+// 챌린져스 레드: #fe4d52
+// 토스 블루: #0064ff
+// 당근 오렌지: #ff8a3d
+// 인프런 그린: #41c471
+// 캐치테이블 오렌지: #ff3d00
+
+root {
+  --var-jayden-yellow: #fabe59;
+  --var-challengers-red: #fe4d52;
+  --var-toss-blue: #0064ff;
+  --var-carrot-orange: #ff8a3d;
+  --var-inflearn-green: #41c471;
+  --var-catchtable-orange: #ff3d00;
+}
+
 html {
-  --background-color: #f0f0f0; // 제이든 옐로우: #fabe59 //
-  --primary-text-color: #000000; //
-  --secondary-text-color: #3c3c3c; //
-  --content-text-color: #000000; //
+  --background-color: #f0f0f0;
+  --primary-text-color: #000000;
+  --secondary-text-color: #3c3c3c;
+  --content-text-color: #000000;
 
   --button-background-color: #f3f3f4;
-  --button-text-color: #010101; //
+  --button-text-color: #010101;
 
-  --tab-text-color: #3c3c3c; //
-  --tab-hover-text-color: #020202; //
-  --tab-selected-background-color: #dbdbdb; //
+  --tab-text-color: #3c3c3c;
+  --tab-hover-text-color: #020202;
+  --tab-selected-background-color: #dbdbdb;
 
-  --chip-background-color: #dbdbdb; //
-  --bio-link-icon-color: #000000; //
-  --about-link-icon-color: #3c3c3c; //
+  --chip-background-color: #dbdbdb;
+  --bio-link-icon-color: #000000;
+  --about-link-icon-color: #3c3c3c;
 
-  --link-text-color: #0064ff; // 챌린져스 빨강 : #fe4d52
-  --post-card-border-color: #010101; //
+  --link-text-color: var(--var-catchtable-orange);
+  --post-card-border-color: #010101;
 
   --markdown-table-even-cell-background-color: #f6f8fa;
-  --markdown-table-border-color: #4f5864; //
-  --markdown-blockquote-border-color: #4f5864; //
+  --markdown-table-border-color: #4f5864;
+  --markdown-blockquote-border-color: #4f5864;
   --markdown-border-color: #e1e4e8;
 }
 
 // dark mode colors
 html[data-theme='dark'] {
-  --background-color: #0f0f0f; // 토스 블루 : #0064ff
-  --primary-text-color: #ffffff; //
-  --secondary-text-color: #dbdbdb; //
-  --content-text-color: #ffffff; //
+  --background-color: #0f0f0f;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #dbdbdb;
+  --content-text-color: #ffffff;
 
   --button-background-color: #444c56;
-  --button-text-color: #fefefe; //
+  --button-text-color: #fefefe;
 
-  --tab-text-color: #dbdbdb; //
-  --tab-hover-text-color: #fdfdfd; //
-  --tab-selected-background-color: #262626; //
+  --tab-text-color: #dbdbdb;
+  --tab-hover-text-color: #fdfdfd;
+  --tab-selected-background-color: #262626;
 
-  --chip-background-color: #262626; //
-  --bio-link-icon-color: #ffffff; //
-  --about-link-icon-color: #dbdbdb; //
+  --chip-background-color: #262626;
+  --bio-link-icon-color: #ffffff;
+  --about-link-icon-color: #dbdbdb;
 
-  --link-text-color: #fe4d52; // 당근 주황 : #ff8a3d, 인프런 초록 : #41c471
-  --post-card-border-color: #fefefe; //
+  --link-text-color: var(--var-inflearn-green);
+  --post-card-border-color: #fefefe;
 
   --markdown-table-even-cell-background-color: #2d333b;
-  --markdown-table-border-color: #dfe2e5; //
-  --markdown-blockquote-border-color: #dfe2e5; //
+  --markdown-table-border-color: #dfe2e5;
+  --markdown-blockquote-border-color: #dfe2e5;
   --markdown-border-color: #e1e4e8;
 }
