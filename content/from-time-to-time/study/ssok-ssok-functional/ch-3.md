@@ -1,6 +1,6 @@
 ---
 emoji: 🖍️
-title: 쏙쏙 들어오는 함수형 코딩 Chapter 2
+title: 쏙쏙 들어오는 함수형 코딩 Chapter 3
 date: '2023-07-22 23:00:00'
 author: 제이든
 tags: 글 문서 요약
