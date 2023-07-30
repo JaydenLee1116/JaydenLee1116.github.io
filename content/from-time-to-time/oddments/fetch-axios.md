@@ -11,8 +11,8 @@ categories: 잡동사니
 
 하나의 키워드를 잡고 좀 편하게 정리하고 싶어 만든 `잡동사니`<br/>
 
-> 잡동사니는 조선 후기 학자 `안정복`이 편찬한 `잡동산이(雜同散異)`에서 유래된 말이다.
-> 잡동산이는 `잡기(雜記)`의 형태를 빌려온 책으로 구체적인 체계가 잡혀있지 않은 형식이다.
+> 잡동사니는 조선 후기 학자 `안정복`이 편찬한 `잡동산이(雜同散異)`에서 유래된 말이다.<br/>
+> 잡동산이는 `잡기(雜記)`의 형태를 빌려온 책으로 구체적인 체계가 잡혀있지 않은 형식이다.<br/>
 > 항목이 다소 난잡하고 내용의 구분이 혼동되어있다고 한다. 🤣
 
 ## 🗂️ fetch VS axios
@@ -26,16 +26,16 @@ categories: 잡동사니
 
 ```js
 try {
-fetch('https://example.com/api/data')
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(`${res.status} ${res.statusText}`);
-    }
-    return res.json();
-  })
-  .then(data => console.log(data));
+  fetch('https://example.com/api/data')
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`${res.status} ${res.statusText}`);
+      }
+      return res.json();
+    })
+    .then((data) => console.log(data));
 } catch (error) {
-  console.log(`에러 발생: ${error}`)
+  console.log(`에러 발생: ${error}`);
 }
 ```
 
@@ -56,7 +56,6 @@ fetch('https://example.com/api/data')
 
 - [fetch](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [axios](https://axios-http.com/kr/docs/intro)
-
 
 ```toc
 

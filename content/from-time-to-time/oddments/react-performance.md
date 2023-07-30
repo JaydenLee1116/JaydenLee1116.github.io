@@ -11,8 +11,8 @@ categories: 잡동사니
 
 하나의 키워드를 잡고 좀 편하게 정리하고 싶어 만든 `잡동사니`<br/>
 
-> 잡동사니는 조선 후기 학자 `안정복`이 편찬한 `잡동산이(雜同散異)`에서 유래된 말이다.
-> 잡동산이는 `잡기(雜記)`의 형태를 빌려온 책으로 구체적인 체계가 잡혀있지 않은 형식이다.
+> 잡동사니는 조선 후기 학자 `안정복`이 편찬한 `잡동산이(雜同散異)`에서 유래된 말이다.<br/>
+> 잡동산이는 `잡기(雜記)`의 형태를 빌려온 책으로 구체적인 체계가 잡혀있지 않은 형식이다.<br/>
 > 항목이 다소 난잡하고 내용의 구분이 혼동되어있다고 한다. 🤣
 
 ## 🗂️ useEffect vs useMemo vs useCallback vs useRef vs React.memo
@@ -29,22 +29,19 @@ categories: 잡동사니
 - 예를 들어 `useEffect`를 사용하여 `fetch` 요청을 보내거나, `로그`를 남기거나, `타이머`를 설정할 수 있다.
 
 ```jsx
-import {useEffect} from "react";
+import { useEffect } from 'react';
 
 function Example() {
   // ...
   useEffect(() => {
     fetch('https://api.example.com/items')
-      .then(res => res.json())
-      .then((data) => { })
+      .then((res) => res.json())
+      .then((data) => {});
     return () => {
       // cleanup
-    }    
-  }, [x])
-  return (
-    <div>
-    </div>
-  );
+    };
+  }, [x]);
+  return <div></div>;
 }
 ```
 
@@ -60,7 +57,9 @@ x가 있을 경우, 첫 마운트 때 그리고 x가 변경될 때마다 fetch �
 - useMemo는 전달되는 함수의 반환값을 기억한다.
 
 ```jsx
-const memoValue = useMemo(() => {return 'memo value!'}, [x]);
+const memoValue = useMemo(() => {
+  return 'memo value!';
+}, [x]);
 ```
 
 - x의 값이 변경되기 전까지는 'memo value!'를 기억하고 있다가, x의 값이 변경되면 다시 함수를 실행하여 반환값을 기억한다.
@@ -71,13 +70,20 @@ const memoValue = useMemo(() => {return 'memo value!'}, [x]);
 - Callback이란 `함수`를 의미한다. 즉, 함수를 기억하기 위한 용도로 사용된다.
 
 ```jsx
-const callback = useCallback(() => {return 'callback function!'}, [x]);
+const callback = useCallback(() => {
+  return 'callback function!';
+}, [x]);
 ```
 
 - x의 값이 변경되기 전까지는 `전달된 콜백 함수 자체를 기억`하고 있다가, x의 값이 변경되면 다시 그 콜백 함수를 기억한다.
 
 ```jsx
-const memoCallback = useMemo(() => () => {return 'callback function!'}, [x]);
+const memoCallback = useMemo(
+  () => () => {
+    return 'callback function!';
+  },
+  [x],
+);
 ```
 
 - useMemo를 통해 콜백 함수를 기억하고, 그 콜백 함수를 useCallback을 통해 기억하는 것과 동일하다.
@@ -104,13 +110,9 @@ const ref = useRef('ref value!');
 - 변수가 변경되지 않는 한, 해당 컴포넌트는 다시 렌더링되지 않는다.
 
 ```jsx
-const MemoComponent = React.memo(({value, handleFunction}) => {
-  return (
-    <div>
-      MemoComponent
-    </div>
-  )
-})
+const MemoComponent = React.memo(({ value, handleFunction }) => {
+  return <div>MemoComponent</div>;
+});
 ```
 
 - value와 handleFunction이 변경되지 않는 한, MemoComponent는 다시 렌더링되지 않는다.
