@@ -107,7 +107,7 @@ module.exports = {
       {
         title: 'Bottle Letter',
         description: '랜덤한 회원에게 유리병에 담긴 편지를 받고 보낼 수 있는 힐링 서비스',
-        techStack: ['TypeScript', 'React', 'Recoil', 'Tanstack Query', 'emotion', 'Jest', 'React-testing-library', 'Mantine UI'],
+        techStack: ['TypeScript', 'React', 'Recoil', 'Tanstack Query', 'emotion'],
         thumbnailUrl: 'sample.png', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/HoYunBros/bottle-letter-fe',
@@ -116,7 +116,15 @@ module.exports = {
       {
         title: 'Second Hand',
         description: '동네 별 중고 물품을 거래할 수 있는 서비스',
-        techStack: ['TypeScript', 'React', 'Tanstack Query', 'Styled Components', 'Storybook', 'Express', 'MongoDB', 'Vercel'],
+        techStack: [
+          'TypeScript',
+          'React',
+          'Tanstack Query',
+          'Styled Components',
+          'Storybook',
+          'Express',
+          'MongoDB',
+        ],
         thumbnailUrl: 'second-hand-main.gif', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/masters2023-2nd-project-02/second-hand',
