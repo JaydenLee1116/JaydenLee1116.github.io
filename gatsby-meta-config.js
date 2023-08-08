@@ -15,9 +15,11 @@ module.exports = {
     bio: {
       role: `프론트엔드 개발자`,
       description: [
+        '꾸준히 나아가는',
         '매일 기록하는',
         '지금을 살아가는',
         '새로움에 도전하는',
+        '함께의 힘을 아는',
         '세상에 기여하는',
         '행복을 추구하는',
       ],
@@ -49,15 +51,17 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        date: '2020.12 ~ 2021.10',
-        activity: '신사업 기획팀 근무',
-        links: {},
+        date: '2023.01 ~ 2023.06',
+        activity: '코드스쿼드 프론트엔드 마스터즈 수료',
+        links: {
+          post: 'https://codesquad.kr/',
+        },
       },
       {
-        date: '2021.11 ~ 2022.06',
-        activity: 'CodeStates AI Bootcamp 수료',
+        date: '2022.08 ~ 2022.11',
+        activity: 'F-lab 프론트엔드 멘토링 참여',
         links: {
-          post: 'https://codestates.com/course/ai',
+          post: 'https://f-lab.kr/',
         },
       },
       {
@@ -69,18 +73,16 @@ module.exports = {
         },
       },
       {
-        date: '2022.08 ~ 2022.11',
-        activity: 'F-lab 프론트엔드 멘토링 참여',
+        date: '2021.11 ~ 2022.06',
+        activity: 'CodeStates AI Bootcamp 수료',
         links: {
-          post: 'https://f-lab.kr/',
+          post: 'https://codestates.com/course/ai',
         },
       },
       {
-        date: '2023.01 ~ ',
-        activity: '코드스쿼드 프론트엔드 마스터즈',
-        links: {
-          post: 'https://codesquad.kr/',
-        },
+        date: '2020.12 ~ 2021.10',
+        activity: '신사업 기획팀 근무',
+        links: {},
       },
     ],
 
@@ -103,12 +105,50 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        title: '업데이트 예정',
-        description: '업데이트 예정입니다.',
-        techStack: ['HTML', 'CSS', 'Javascript', 'Typescript', 'React.js'],
-        thumbnailUrl: 'sample.png', // assets 폴더에 png 파일 지정 ex) blog.png
+        title: 'Bottle Letter',
+        description: '랜덤한 회원에게 유리병에 담긴 편지를 받고 보낼 수 있는 힐링 서비스',
+        techStack: [
+          'TypeScript',
+          'React',
+          'Recoil',
+          'Tanstack Query',
+          'emotion',
+          'Jest',
+          'React-testing-library',
+          'Mantine UI',
+        ],
+        thumbnailUrl: 'bottle-letter-icon.png', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
-          github: 'https://github.com/JaydenLee1116',
+          github: 'https://github.com/HoYunBros/bottle-letter-fe',
+        },
+      },
+      {
+        title: 'Second Hand',
+        description: '동네 별 중고 물품을 거래할 수 있는 서비스',
+        techStack: [
+          'TypeScript',
+          'React',
+          'Tanstack Query',
+          'Styled Components',
+          'Storybook',
+          'Express',
+          'MongoDB',
+          'Vercel',
+        ],
+        thumbnailUrl: 'second-hand-main.gif', // assets 폴더에 png 파일 지정 ex) blog.png
+        links: {
+          github: 'https://github.com/masters2023-2nd-project-02/second-hand',
+        },
+      },
+      {
+        title: 'Issue Tracker',
+        description: '이슈 단위로 프로젝트를 관리할 수 있는 서비스',
+        techStack: ['TypeScript', 'React', 'Tailwind CSS', 'Storybook', 'Express', 'MongoDB'],
+        thumbnailUrl: 'issue-tracker-main.gif', // assets 폴더에 png 파일 지정 ex) blog.png
+        links: {
+          github: 'https://github.com/codesquad-members-2023-team2/issue-tracker',
+          demo:
+            'https://github.com/codesquad-members-2023-team2/issue-tracker/wiki/%EA%B8%B0%EB%8A%A5-%EB%8D%B0%EB%AA%A8',
         },
       },
     ],
