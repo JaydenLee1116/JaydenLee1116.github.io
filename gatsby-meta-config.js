@@ -117,7 +117,7 @@ module.exports = {
           'React-testing-library',
           'Mantine UI',
         ],
-        thumbnailUrl: 'bottle-letter-icon.png', // assets 폴더에 png 파일 지정 ex) blog.png
+        thumbnailUrl: '', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/HoYunBros/bottle-letter-fe',
         },
@@ -135,7 +135,7 @@ module.exports = {
           'MongoDB',
           'Vercel',
         ],
-        thumbnailUrl: 'second-hand-main.gif', // assets 폴더에 png 파일 지정 ex) blog.png
+        thumbnailUrl: '', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/masters2023-2nd-project-02/second-hand',
         },
@@ -144,7 +144,7 @@ module.exports = {
         title: 'Issue Tracker',
         description: '이슈 단위로 프로젝트를 관리할 수 있는 서비스',
         techStack: ['TypeScript', 'React', 'Tailwind CSS', 'Storybook', 'Express', 'MongoDB'],
-        thumbnailUrl: 'issue-tracker-main.gif', // assets 폴더에 png 파일 지정 ex) blog.png
+        thumbnailUrl: '', // assets 폴더에 png 파일 지정 ex) blog.png
         links: {
           github: 'https://github.com/codesquad-members-2023-team2/issue-tracker',
           demo:
