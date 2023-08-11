@@ -28,8 +28,8 @@ categories: 보름칼럼
 
 ## 🚈 들어가기에 앞서...
 
-- [JS로 보는 객체지향 - 1.객체편](https://jaydenlee1116.github.io/%EA%BE%B8%EC%A4%80%ED%9E%88%EA%B8%B0%EB%A1%9D/%EB%B3%B4%EB%A6%84%EC%B9%BC%EB%9F%BC/2-JS%EB%A1%9C%EB%B3%B4%EB%8A%94%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-1%EA%B0%9D%EC%B2%B4%ED%8E%B8/)
-- [JS로 보는 객체지향 - 2.상속합성편](https://jaydenlee1116.github.io/%EA%BE%B8%EC%A4%80%ED%9E%88%EA%B8%B0%EB%A1%9D/%EB%B3%B4%EB%A6%84%EC%B9%BC%EB%9F%BC/3-JS%EB%A1%9C%EB%B3%B4%EB%8A%94%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-2%EC%9C%84%EC%9E%84%ED%95%A9%EC%84%B1%ED%8E%B8/)
+- [JS로 보는 객체지향 - 1.객체편](https://jaydenlee1116.github.io/steadily/full-moon-column/2-object-oriented-in-js-1-object/)
+- [JS로 보는 객체지향 - 2.상속합성편](https://jaydenlee1116.github.io/steadily/full-moon-column/3-object-oriented-in-js-2-inheritance-composition/)
 
 처음 프로그래밍을 배우고 가장 이해가 안되고 공감되지 않았던 개발자분들의 말이 있었다. `어떤 실체화된 현실 세계의 것을 코드로 구현하고 현실의 문제를 해결하는 게 개발자다.`와 같은 말들이었다.
 당장 화면에 `Hello, Wolrd!`를 찍어내고, 몇몇 계산을 편하게 하는 정도의 나에겐 전혀 공감이 되질 않았다. 이후 공부를 하며 그 말을 따라가다보니 `객체지향`에 도달했다.<br/>

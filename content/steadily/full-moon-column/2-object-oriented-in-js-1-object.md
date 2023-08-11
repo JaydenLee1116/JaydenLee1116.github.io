@@ -28,8 +28,8 @@ categories: 보름칼럼
 
 ## 🚈 들어가기에 앞서...
 
-- [JS로 보는 객체지향 - 1.객체편](https://jaydenlee1116.github.io/%EA%BE%B8%EC%A4%80%ED%9E%88%EA%B8%B0%EB%A1%9D/%EB%B3%B4%EB%A6%84%EC%B9%BC%EB%9F%BC/2-JS%EB%A1%9C%EB%B3%B4%EB%8A%94%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-1%EA%B0%9D%EC%B2%B4%ED%8E%B8/)
-- [JS로 보는 객체지향 - 2.상속합성편](https://jaydenlee1116.github.io/%EA%BE%B8%EC%A4%80%ED%9E%88%EA%B8%B0%EB%A1%9D/%EB%B3%B4%EB%A6%84%EC%B9%BC%EB%9F%BC/3-JS%EB%A1%9C%EB%B3%B4%EB%8A%94%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-2%EC%9C%84%EC%9E%84%ED%95%A9%EC%84%B1%ED%8E%B8/)
+- [JS로 보는 객체지향 - 1.객체편](https://jaydenlee1116.github.io/steadily/full-moon-column/2-object-oriented-in-js-1-object/)
+- [JS로 보는 객체지향 - 2.상속합성편](https://jaydenlee1116.github.io/steadily/full-moon-column/3-object-oriented-in-js-2-inheritance-composition/)
 
 처음 프로그래밍을 배우고 가장 이해가 안되고 공감되지 않았던 개발자분들의 말이 있었다. `어떤 실체화된 현실 세계의 것을 코드로 구현하고 현실의 문제를 해결하는 게 개발자다.`와 같은 말들이었다.
 당장 화면에 `Hello, Wolrd!`를 찍어내고, 몇몇 계산을 편하게 하는 정도의 나에겐 전혀 공감이 되질 않았다. 이후 공부를 하며 그 말을 따라가다보니 `객체지향`에 도달했다.<br/>
@@ -66,7 +66,7 @@ categories: 보름칼럼
 
 위의 내용을 조금 쉽고 간단하게 정리해보자.
 
-> 객체지향 프로그래밍은 프로그래밍을 하는 하나의 방법이다.<br/> 
+> 객체지향 프로그래밍은 프로그래밍을 하는 하나의 방법이다.<br/>
 > 한 줄 한 줄 명령어를 작성하는 것이 아닌, "객체"라는 하나의 단위이자 덩어리로 나눈다.<br/>
 > 이 단위들은 서로 영향을 주고 받을 수 있으며 데이터를 처리할 수 있다.<br/>
 > 코드 변경(수정)이 쉽기 때문에 큰 프로그램을 개발할 때 많이 사용한다.<br/>
@@ -95,12 +95,12 @@ let ant = { name: 'ant1', age: 1 };
 좀더 살아있는(?) 개미를 만들어보자.
 
 ```js
-let ant = { 
+let ant = {
   name: 'ant1',
   age: 1,
   move() {
-    console.log('ant is moving!') 
-  }
+    console.log('ant is moving!');
+  },
 };
 ```
 
@@ -122,7 +122,7 @@ class Ant {
     this.name = name;
     this.age = age;
   }
-  
+
   move() {
     console.log('ant is moving!');
   }
@@ -153,15 +153,15 @@ class Ant {
     this.age = age;
     this.position = position;
   }
-  
+
   move() {
     if (Math.random() < 0.5) {
       this.position--;
     } else {
       this.position++;
     }
-    
-    console.log(`${this.name} 개미의 위치는 ${this.position} 지점 입니다.`)
+
+    console.log(`${this.name} 개미의 위치는 ${this.position} 지점 입니다.`);
   }
 }
 
@@ -181,9 +181,9 @@ const ant3 = new Ant('ant3', 5, 15);
 
 이번 글은 각각의 파트들을 개미 이모지로 표현해봤다. 개미 파트 하나하나가 모여서 이 글 전체를 완성해주는 것을 통해 객체지향에서 여러 객체들이 모여 큰 소프트웨어가 완성되는 느낌을
 표현해보고 싶었다.(잘 전달되었을지는 모르겠다.) 이렇듯 객체지향에선 객체들이 그들만의 `역할`과 `책임`을 갖고 서로를 도와가며(`협동`하며) 거대한 프로그램을 만들어간다. 이번 글을 통해
-`객체` 하나에 대해 집중했다면, 다음 편에선 각 객체들이 어떻게 서로 도와가며 좀더 스케일업된 무언가를 만들어가는지 살펴보려 한다. 
+`객체` 하나에 대해 집중했다면, 다음 편에선 각 객체들이 어떻게 서로 도와가며 좀더 스케일업된 무언가를 만들어가는지 살펴보려 한다.
 
-> 아직 많이 부족한 개발자입니다. 내용에 대한 오류가 있다면, 언제든 편하게 말씀해주세요! 감사합니다! 
+> 아직 많이 부족한 개발자입니다. 내용에 대한 오류가 있다면, 언제든 편하게 말씀해주세요! 감사합니다!
 
 ## 🎁 참고
 
