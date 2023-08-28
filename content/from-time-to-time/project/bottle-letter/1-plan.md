@@ -1,6 +1,6 @@
 ---
 emoji: ✉️
-title: [Bottle-Letter] 1. Plan
+title: Bottle-Letter 1. Plan
 date: '2023-08-28 21:30:00'
 author: 제이든
 tags: 기록 일지 성장 발전 개발
