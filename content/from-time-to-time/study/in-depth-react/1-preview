@@ -1,17 +1,21 @@
 ---
 emoji: ⚛️
-title: React 톺아보기를 톺아보기
+title: React 톺아보기를 톺아보기 - 1
 date: '2023-10-14 16:30:00'
 author: 제이든
 tags: 글 문서 요약
 categories: 스터디 아티클
 ---
 
-# ⚛️ 리액트 톺아보기
-
-이 글은 스터디에서 [리액트 톺아보기](https://goidle.github.io/react/in-depth-react-preview/)를 읽고 정리하며 주관적으로 정리한 글입니다. 글을 읽고 핵심적이거나 더 깊게 보고 싶은 부분을 정리하였습니다. 원문보다 더 가독성이 좋지 못할(?) 수 있으니 원문도 읽어보시는 것을 추천드립니다.
+이 글은 스터디에서 [리액트 톺아보기 1. Preview](https://goidle.github.io/react/in-depth-react-preview/)를 읽고 정리하며 주관적으로 정리한 글입니다. 글을 읽고 핵심적이거나 더 깊게 보고 싶은 부분을 정리하였습니다. 원문보다 더 가독성이 좋지 못할(?) 수 있으니 원문도 읽어보시는 것을 추천드립니다.
 
 또한, 글을 읽고 이해한 내용을 바탕으로 작성한 글이기 때문에 틀린 내용이 있을 수 있습니다. 틀린 내용이 있다면 댓글로 알려주시면 감사하겠습니다.
+
+# ⚛️ 리액트 톺아보기
+
+## 왜 `리액트 톺아보기`를 보는가
+
+Next.js를 통해 한층 더 추상화된 React를 사용하다보니, 아이러니하게도 React에 대한 더 깊은 이해가 필요하겠다는 갈증이 들었다. 리액트 공식문서도 혼자서 1번, 스터디에서 1번 읽었지만 뭐랄까... 전반적인 React의 컨셉과 api 사용법은 알겠으나 그 내부 구현에 대한 건 생각보다 깊이 있게 들어가기가 힘들었다. 그러던 중 `리액트 톺아보기` 글을 발견하였고 한국말로 정리된 글 중 가장 깊이있는 글이라고 생각하여 해당 글을 읽기로 했다! 부디 지금 내가 느끼는 리액트에 대한 갈증이 해결되었으면 좋겠다.
 
 ## 1. 글의 목적
 
@@ -187,7 +191,7 @@ SyntheticEvent의 주요 특징과 동작 방식을 자세히 설명하겠습니
 
 # 출처
 
-- [리액트 톺아보기](https://goidle.github.io/react/in-depth-react-preview/)
+- [리액트 톺아보기 1. Preview](https://goidle.github.io/react/in-depth-react-preview/)
 - [React v16.3.0 packages](https://github.com/facebook/react/tree/16.3-dev/packages)
 - [위키백과: 버퍼](https://ko.wikipedia.org/wiki/%EB%8B%A4%EC%A4%91_%EB%B2%84%ED%8D%BC%EB%A7%81)
 - [더블 버퍼링이란](https://coding-factory.tistory.com/692)
