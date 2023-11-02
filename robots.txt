@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://jaydenlee1116.github.io/sitemap/sitemap-index.xml
+Host: https://jaydenlee1116.github.io
