@@ -1,0 +1,2 @@
+# app-ads.txt — 위치: https://jaydenlee1116.github.io/app-ads.txt (사이트 맨 위 폴더). 스토어 '웹사이트' 칸에 https://jaydenlee1116.github.io 를 적는다.
+google.com, pub-5738844736028792, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JaydenLee1116 Games</title>
+<meta name="description" content="1인 게임 개발자 JaydenLee1116 — 아슬아슬 찐빵이(grazebun)">
+<link rel="icon" href="grazebun/icon.png">
+<style>
+  :root { --bg: #fbf4e6; --card: #fffaf0; --ink: #3b2a1e; --muted: #7a6450; --line: #e6d6bc; --accent: #c0502e; --todo: #ffe08a; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #1f1812; --card: #2a2119; --ink: #f2e6d4; --muted: #c2ab90; --line: #4a3b2d; --accent: #f08a62; --todo: #7a5b00; }
+  }
+  :root[data-theme="dark"] { --bg: #1f1812; --card: #2a2119; --ink: #f2e6d4; --muted: #c2ab90; --line: #4a3b2d; --accent: #f08a62; --todo: #7a5b00; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.7; word-break: keep-all;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+  h1 { font-size: 1.4rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+  .game { display: flex; gap: 16px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+  .game img { width: 72px; height: 72px; border-radius: 18px; image-rendering: pixelated; flex: none; }
+  .game h2 { font-size: 1.1rem; margin: 0; }
+  .game p { margin: 2px 0; color: var(--muted); font-size: .95rem; }
+  a { color: var(--accent); }
+  mark.todo { background: var(--todo); color: inherit; padding: 0 4px; border-radius: 4px; }
+  footer { margin-top: 32px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>JaydenLee1116</h1>
+  <p class="sub">혼자 만드는 작은 모바일 게임</p>
+  <div class="game">
+    <img src="grazebun/icon.png" alt="아슬아슬 찐빵이 앱 아이콘" width="72" height="72">
+    <div>
+      <h2>아슬아슬 찐빵이: 60초 탄막</h2>
+      <p>찐빵이를 움직여 아슬아슬하게 탄을 피하는 60초 게임 · grazebun</p>
+      <p><a href="grazebun/privacy.html">개인정보 처리방침</a></p>
+    </div>
+  </div>
+  <footer>문의: <a href="mailto:jaydenlee.dev@gmail.com">jaydenlee.dev@gmail.com</a></footer>
+</main>
+</body>
+</html>
